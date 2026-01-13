@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.object-inherit {
+  object-fit: inherit;
+}
+
+.swiper-navigation-icon {
+  display: none;
+}
+
+.swiper-scnd-pagination {
+  top: 10% !important;
+  left: 90% !important;
+}
+
+.swiper-thrd-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  bottom: 0 !important;
+}
+
+.autoplay-progress {
+  left: 0 !important;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  stroke: #0000ff;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.swiper-pagination-bullet-active {
+  background: #0000ff !important;
+}
+
+

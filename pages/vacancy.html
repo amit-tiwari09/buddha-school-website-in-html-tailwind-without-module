@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="min-h-screen w-full">
+
+
+    <!--============================ Sidebar visible on mobile and tablet ===================================-->
+    <div id="sidebar"
+        class="fixed top-0 left-0 h-full w-full md:w-96 lg:hidden bg-white z-[60] transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+
+        <!--========== Sidebar Header =========-->
+        <div class="bg-blue-400 p-4 flex items-center justify-between">
+            <div class="text-xl font-bold text-white">Menu</div>
+            <button class="p-2 rounded-lg hover:bg-blue-500 transition-colors toggle-sidebar">
+                <img src="../assets/svg/x-white.svg" class="w-6 h-6 pointer-events-none" alt="">
+            </button>
+        </div>
+
+        <!--========= Navigation Menu =====-->
+        <nav class="p-4">
+            <ul class="space-y-2">
+
+                <!--======= Home =======-->
+                <li>
+                    <a href="../index.html"
+                        class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <img src="../assets/svg/house-blue.svg" class="w-5 h-5 mr-3" alt="">
+                        <span class="font-medium">Home</span>
+                    </a>
+                </li>
+
+                <!--======= About with submenu =======-->
+                <li>
+                    <button id="activities"
+                        class="has-submenu flex items-center justify-between w-full px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <div class="flex items-center">
+                            <img src="../assets/svg/info-blue.svg" class="w-5 h-5 mr-3" alt="">
+                            <span class="font-medium">About</span>
+                        </div>
+                        <img id="activities-icon" src="../assets/svg/cheveron-right.svg"
+                            class="h-5 w-5 transform transition-transform" alt="">
+                    </button>
+                    <ul id="activities-submenu" class="submenu hidden pl-12 mt-2 space-y-2">
+                        <li>
+                            <a href="./about/about-us.html" class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about/organization-structure.html"
+                                class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                Organization Structure
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about/team.html" class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                Team
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about/assembly-member.html" class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                Assembly Member
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!--======= Activities with Submenu =======-->
+                <li>
+                    <button id="activities"
+                        class="has-submenu flex items-center justify-between w-full px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <div class="flex items-center">
+                            <img src="../assets/svg/activity-blue.svg" class="w-5 h-5 mr-3" alt="">
+                            <span class="font-medium">Activities</span>
+                        </div>
+                        <img id="activities-icon" src="../assets/svg/cheveron-right.svg"
+                            class="h-5 w-5 transform transition-transform" alt="">
+                    </button>
+                    <ul id="activities-submenu" class="submenu hidden pl-12 mt-2 space-y-2">
+                        <li>
+                            <a href="./our-activity.html" class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                Our Activities
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./upcoming-activity.html" class="block px-4 py-2 rounded-lg text-gray-600">
+                                Upcoming Activities
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!--======= Publication =======-->
+                <li>
+                    <a href="./publication.html"
+                        class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <img src="../assets/svg/book-open-blue.svg" class="w-5 h-5 mr-3" alt="">
+                        <span class="font-medium">Publication</span>
+                    </a>
+                </li>
+
+                <!--======= Articles with Submenu =======-->
+                <li>
+                    <button id="articles"
+                        class="has-submenu flex items-center justify-between w-full px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <div class="flex items-center">
+                            <img src="../assets/svg/file-text-blue.svg" class="w-5 h-5 mr-3" alt="">
+                            <span class="font-medium">Articles</span>
+                        </div>
+                        <img id="articles-icon" src="../assets/svg/cheveron-right.svg"
+                            class="h-5 w-5 transform transition-transform" alt="">
+                    </button>
+                    <ul id="articles-submenu" class="submenu hidden pl-12 mt-2 space-y-2">
+                        <li>
+                            <a href="./teacher-article.html" class="block px-4 py-2 rounded-lg text-gray-600 ">
+                                Teacher Article
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./student-article.html" class="block px-4 py-2 rounded-lg text-gray-600">
+                                Student Article
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!--======= Gallery =======-->
+                <li>
+                    <a href="#"
+                        class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <img src="../assets/svg/image-blue.svg" class="w-5 h-5 mr-3" alt="">
+                        <span class="font-medium">Gallery</span>
+                    </a>
+                </li>
+
+                <!--======= Vacancy =======-->
+                <li>
+                    <a href="#"
+                        class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <img src="../assets/svg/briefcase-blue.svg" class="w-5 h-5 mr-3" alt="">
+                        <span class="font-medium">Vacancy</span>
+                    </a>
+                </li>
+
+                <!--======= Contact =======-->
+                <li>
+                    <a href="#"
+                        class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-stone-100 transition-colors">
+                        <img src="../assets/svg/phone-blue.svg" class="w-5 h-5 mr-3" alt="">
+                        <span class="font-medium">Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <!--========= Contact Info =========-->
+            <div class="mt-8 px-4 py-6 bg-stone-50 rounded-lg">
+                <h4 class="font-semibold text-gray-900 mb-4">Get in Touch</h4>
+                <div class="space-y-3 text-sm text-gray-600">
+                    <p class="flex items-start gap-2">
+                        <img src="../assets/svg/phone-blue.svg" class="w-5 h-5" alt="">
+                        +977 98290783545
+                    </p>
+                    <p class="flex items-start gap-2">
+                        <img src="../assets/svg/mail-blue.svg" class="w-5 h-5" alt="">
+                        info@ourschool.edu
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--============================ Top Header Section ===================================-->
+    <section id="top-header" class="text-white py-3 bg-blue-500 mx-auto px-6 grid grid-cols-2">
+        <!--======== contact details =========-->
+        <div class="col-span-1 hidden md:flex items-center justify-start gap-5 text-sm px-5" data-aos="fade-up">
+            <a href="tel:+9779867548976"
+                class="flex items-center gap-1 justify-center transition-all hover:brightness-110 hover:scale-[1.02] whitespace-nowrap">
+                <img src="../assets/svg/phone-white.svg" class="w-4 h-4 pointer-events-none">
+                <span class="hidden lg:inline-flex">+977 9867548976</span>
+            </a>
+
+            <a href="mailto:info@buddhaschool.edu"
+                class="flex items-center gap-1 justify-center transition-all hover:brightness-110 hover:scale-[1.02] whitespace-nowrap">
+                <img src="../assets/svg/mail-white.svg" class="w-4 h-4 pointer-events-none">
+                <span class="hidden lg:inline-flex">info@buddhaschool.edu</span>
+            </a>
+
+            <a href="https://www.google.com/maps?q=Buddha+School" target="_blank"
+                class="flex items-center gap-1 justify-center transition-all hover:brightness-110 hover:scale-[1.02] whitespace-nowrap">
+                <img src="../assets/svg/map-pin.svg" class="w-4 h-4 pointer-events-none">
+                <span class="hidden lg:inline-flex">Lumbini, Nepal</span>
+            </a>
+        </div>
+
+        <!--======== social media links =========-->
+        <div class="col-span-2 md:col-span-1 flex flex items-center justify-center md:justify-end gap-5 text-sm px-5"
+            data-aos="fade-up">
+            <a href="#" target="_blank"
+                class="min-w-8 min-h-8 rounded-full bg-stone-500/50 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                <img src="../assets/svg/facebook-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+            </a>
+
+            <a href="#" target="_blank"
+                class="min-w-8 min-h-8 rounded-full bg-stone-500/50 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                <img src="../assets/svg/insta-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+            </a>
+
+            <a href="#" target="_blank"
+                class="min-w-8 min-h-8 rounded-full bg-stone-500/50 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                <img src="../assets/svg/twitter-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+            </a>
+
+            <a href="#" target="_blank"
+                class="min-w-8 min-h-8 rounded-full bg-stone-500/50 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                <img src="../assets/svg/linkedin-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+            </a>
+        </div>
+    </section>
+
+    <!--============================ Header Section ===================================-->
+    <header class="bg-white/90 backdrop-blur-sm shadow-md sticky top-0 z-50 ">
+        <div class="container mx-auto px-2 lg:px-12">
+            <!--===================== Logo and Menus ======================-->
+            <div class="flex items-center justify-between py-4 md:px-5 xl:px-12">
+                <a href="/" class="flex items-center gap-3 group" data-aos="fade-right">
+                    <div
+                        class="w-14 h-14 rounded-full /10 flex items-center justify-center group-hover:/20 transition-colors">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHlLz6fcx8lsnjivH94yQuKnR-SGVza3evHA&s">
+                    </div>
+                    <div class="whitespace-nowrap">
+                        <h1 class=" text-xl md:text-2xl font-bold ">Buddha School</h1>
+                        <p class="text-xs  tracking-wider">Path to Enlightenment</p>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-1" data-aos="fade-left">
+
+                    <!--======== Home =======-->
+                    <div class="relative group">
+                        <a href="../index.html"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-black group-hover:bg-blue-100 transition-all rounded-lg duration-200">
+                            Home
+                        </a>
+                    </div>
+
+                    <!--======== About =======-->
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium  group-hover:bg-blue-100 rounded-lg transition-all pr-2 duration-200">
+                            About
+                            <img src="../assets/svg/cheveron-down.svg"
+                                class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300">
+                        </button>
+                        <div
+                            class="bg-white absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-lg shadow-md border min-w-[190px] py-2 overflow-hidden">
+                            <a href="./about/about-us.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                About us
+                            </a>
+                            <a href="./about/organization-structure.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Organization Structure
+                            </a>
+                            <a href="./about/team.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Team
+                            </a>
+                            <a href="./about/assembly-member.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Assembly Member
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--======== Activities =======-->
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium group-hover:bg-blue-100 rounded-lg duration-200 transition-all pr-2">
+                            Activities
+                            <img src="../assets/svg/cheveron-down.svg"
+                                class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300">
+                        </button>
+                        <div
+                            class="bg-white absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-lg shadow-md border min-w-[190px] py-2 overflow-hidden">
+                            <a href="./activity/our-activity.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Our Activity
+                            </a>
+                            <a href="./activity/upcoming-activity.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Upcoming Activity
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--======== Publication =======-->
+                    <div class="relative group">
+                        <a href="./publication.html"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-black group-hover:bg-blue-100 rounded-lg duration-200 transition-all rounded-lg">
+                            Publication
+                        </a>
+                    </div>
+
+                    <!--======== Articles =======-->
+                    <div class="relative group">
+                        <button type="button"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium group-hover:bg-blue-100 rounded-lg duration-200 transition-all  pr-2">
+                            Articles
+                            <img src="../assets/svg/cheveron-down.svg"
+                                class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300">
+                        </button>
+                        <div
+                            class="bg-white absolute left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 rounded-lg shadow-md border min-w-[190px] py-2 overflow-hidden">
+                            <a href="./article/teacher-article.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Teacher Articles
+                            </a>
+                            <a href="./pages/article/student-article.html"
+                                class="block px-4 py-2.5 text-sm hover:bg-blue-500/10 hover: transition-colors">
+                                Student Articles
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--======== Gallery =======-->
+                    <div class="relative group">
+                        <a href="./gallery.html"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-black group-hover:bg-blue-100 rounded-lg duration-200 transition-all rounded-lg">
+                            Gallery
+                        </a>
+                    </div>
+
+                    <!--======== Vacancy =======-->
+                    <div class="relative group">
+                        <a href="./vacancy.html"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-black group-hover:bg-blue-100 rounded-lg duration-200 transition-all rounded-lg">
+                            Vacancy
+                        </a>
+                    </div>
+
+                    <!--======== Contact =======-->
+                    <div class="relative group">
+                        <a href="./contact-us.html"
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-black group-hover:bg-blue-100 rounded-lg duration-200 transition-all rounded-lg">
+                            Contact
+                        </a>
+                    </div>
+                </nav>
+
+                <button class="lg:hidden p-2 transition-colors toggle-sidebar">
+                    <img src="../assets/svg/breadcrumb.svg" class="w-6 h-6 pointer-events-none" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!--============================ Main Section ===================================-->
+    <section class="w-full min-h-screen">
+
+        <!--=============== Main Section Text ===============-->
+        <div class="relative py-16 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1600"
+                alt="Buddha School Background" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-blue-600/50"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <p class="text-sm uppercase tracking-wider mb-2">
+                    Welcome to Buddha School
+                </p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Vacancy
+                </h2>
+                <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+                    Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+
+        <!--=============== Cards ===============-->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-16 z-10">
+            <div class="relative grid grid-cols-1 md:grid-cols-3 gap-6 z-4">
+
+                <!--=========== card 1 =================-->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="../assets/svg/badge-dollar-light-blue.svg" class="w-7 h-7" alt="">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Competitive Salary</h3>
+                    <p class="text-gray-600 text-sm">We offer attractive compensation packages and benefits.</p>
+                </div>
+
+
+                <!--=========== card 2 =================-->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="../assets/svg/badge-dollar-light-blue.svg" class="w-7 h-7" alt="">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Competitive Salary</h3>
+                    <p class="text-gray-600 text-sm">We offer attractive compensation packages and benefits.</p>
+                </div>
+
+
+                <!--=========== card 3 =================-->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <img src="../assets/svg/badge-dollar-light-blue.svg" class="w-7 h-7" alt="">
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Competitive Salary</h3>
+                    <p class="text-gray-600 text-sm">We offer attractive compensation packages and benefits.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--======== Current Vacancies section ==========-->
+        <div class="bg-white py-3">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <p class="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-2">Available Positions</p>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">Current Openings</h3>
+                    <p class="text-gray-600">Explore our current job opportunities and find the perfect role for you.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <!--===== Job 1 ======-->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mathematics Teacher</h4>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Full Time
+                                            </span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                Teaching
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/map-pin.svg" class="w-4 h-4 mr-2" alt="">
+                                        Lumbini, Nepal
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/briefcase.svg" class="w-4 h-4 mr-2" alt="">
+                                        3+ years experience
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/calendar.svg" class="w-4 h-4 mr-2" alt="">
+                                        Posted: January 5, 2026
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-600 mt-3 leading-relaxed">
+                                    We are seeking an experienced Mathematics teacher for secondary level. The ideal
+                                    candidate should have strong subject knowledge and the ability to make complex
+                                    concepts
+                                    easy to
+                                    understand.
+                                </p>
+                            </div>
+
+                            <!-- Button stays at top -->
+                            <div class="mt-4 lg:mt-0 lg:ml-6">
+                                <button type="button" data-targetModalId="vacancy-apply-modal"
+                                    class="open-modal w-full lg:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--===== Job 2 ======-->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mathematics Teacher</h4>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Full Time
+                                            </span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                Teaching
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/map-pin.svg" class="w-4 h-4 mr-2" alt="">
+                                        Lumbini, Nepal
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/briefcase.svg" class="w-4 h-4 mr-2" alt="">
+                                        3+ years experience
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/calendar.svg" class="w-4 h-4 mr-2" alt="">
+                                        Posted: January 5, 2026
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-600 mt-3 leading-relaxed">
+                                    We are seeking an experienced Mathematics teacher for secondary level. The ideal
+                                    candidate should have strong subject knowledge and the ability to make complex
+                                    concepts
+                                    easy to
+                                    understand.
+                                </p>
+                            </div>
+
+                            <!-- Button stays at top -->
+                            <div class="mt-4 lg:mt-0 lg:ml-6">
+                                <button type="button" data-targetModalId="vacancy-apply-modal"
+                                    class="open-modal w-full lg:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--===== Job 3 ======-->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mathematics Teacher</h4>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Full Time
+                                            </span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                Teaching
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/map-pin.svg" class="w-4 h-4 mr-2" alt="">
+                                        Lumbini, Nepal
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/briefcase.svg" class="w-4 h-4 mr-2" alt="">
+                                        3+ years experience
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/calendar.svg" class="w-4 h-4 mr-2" alt="">
+                                        Posted: January 5, 2026
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-600 mt-3 leading-relaxed">
+                                    We are seeking an experienced Mathematics teacher for secondary level. The ideal
+                                    candidate should have strong subject knowledge and the ability to make complex
+                                    concepts
+                                    easy to
+                                    understand.
+                                </p>
+                            </div>
+
+                            <!-- Button stays at top -->
+                            <div class="mt-4 lg:mt-0 lg:ml-6">
+                                <button type="button" data-targetModalId="vacancy-apply-modal"
+                                    class="open-modal w-full lg:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--===== Job 4 ======-->
+                    <div
+                        class="bg-white border border-gray-200 rounded-lg shadow-sm p-6 hover:shadow-md transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mathematics Teacher</h4>
+                                        <div class="flex flex-wrap gap-2 mb-3">
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Full Time
+                                            </span>
+                                            <span
+                                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                Teaching
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 text-sm text-gray-600">
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/map-pin.svg" class="w-4 h-4 mr-2" alt="">
+                                        Lumbini, Nepal
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/briefcase.svg" class="w-4 h-4 mr-2" alt="">
+                                        3+ years experience
+                                    </div>
+                                    <div class="flex items-center">
+                                        <img src="../assets/svg/calendar.svg" class="w-4 h-4 mr-2" alt="">
+                                        Posted: January 5, 2026
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-600 mt-3 leading-relaxed">
+                                    We are seeking an experienced Mathematics teacher for secondary level. The ideal
+                                    candidate should have strong subject knowledge and the ability to make complex
+                                    concepts
+                                    easy to
+                                    understand.
+                                </p>
+                            </div>
+
+                            <!-- Button stays at top -->
+                            <div class="mt-4 lg:mt-0 lg:ml-6">
+                                <button type="button" data-targetModalId="vacancy-apply-modal"
+                                    class="open-modal w-full lg:w-auto bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center py-4">
+            <button
+                class="inline-flex items-center justify-center px-8 py-3 bg-blue-500 text-white text-center rounded-full font-medium hover:bg-blue-600 transition shadow-lg">
+                Load More
+                <img src="../assets/svg/cheveron-right-white.svg" class="w-5 h-5" alt="">
+            </button>
+        </div>
+
+    </section>
+
+    <!--============================ Modal ===================================-->
+    <div id="vacancy-apply-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+
+            <!--======= Modal Header =======-->
+            <div class="bg-blue-500 text-white p-6 rounded-t-xl sticky top-0 z-10">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Application Form</h3>
+                        <p class="text-blue-100">Mathematics Teacher Position</p>
+                    </div>
+                    <button type="button" data-targetModalId="vacancy-apply-modal"
+                        class="close-modal text-white hover:text-gray-200 text-3xl font-light leading-none inline-flex items-center justify-center">
+                        <img src="../assets/svg/x-white.svg" class="w-5 h-5 pointer-events-none" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <!--================== Modal Body =================-->
+            <div class="p-6">
+                <form id="applicationForm" class="space-y-6">
+                    <!--====== Personal Information Section =======-->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-blue-500">
+                            <span
+                                class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-blue-400 text-blue-600">
+                                <img src="../assets/svg/users-white.svg" class="w-5 h-5" alt="">
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">
+                                Personal Information
+                            </h4>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    First Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="Enter first name">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Last Name <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="Enter last name">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address <span class="text-red-500">*</span>
+                                </label>
+                                <input type="email" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="your.email@example.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Phone Number <span class="text-red-500">*</span>
+                                </label>
+                                <input type="tel" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="+977 9867543657">
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Current Address <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                placeholder="Street address, City, District">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Date of Birth <span class="text-red-500">*</span>
+                                </label>
+                                <input type="date" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Gender <span class="text-red-500">*</span>
+                                </label>
+                                <select required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200">
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--====== Professional Information Section =======-->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-blue-500">
+                            <span
+                                class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-blue-400 text-blue-600">
+                                <img src="../assets/svg/briefcase-white.svg" class="w-5 h-5" alt="">
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">
+                                Professional Information
+                            </h4>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Highest Qualification <span class="text-red-500">*</span>
+                                </label>
+                                <select required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200">
+                                    <option value="">Select qualification</option>
+                                    <option value="bachelors">Bachelor's Degree</option>
+                                    <option value="masters">Master's Degree</option>
+                                    <option value="phd">PhD</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Field of Study <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="e.g., Mathematics, Education">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Years of Experience <span class="text-red-500">*</span>
+                                </label>
+                                <select required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200">
+                                    <option value="">Select experience</option>
+                                    <option value="0-1">0-1 years</option>
+                                    <option value="1-3">1-3 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="5-10">5-10 years</option>
+                                    <option value="10+">10+ years</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Current/Previous Institution
+                                </label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                    placeholder="Institution name">
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Teaching Subjects/Specialization
+                            </label>
+                            <input type="text" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+                                placeholder="e.g., Algebra, Calculus, Geometry">
+                        </div>
+                    </div>
+
+                    <!--========= Documents Section =========-->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-blue-500">
+                            <span
+                                class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-blue-400 text-blue-600">
+                                <img src="../assets/svg/file-text-white.svg" class="w-5 h-5" alt="">
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">
+                                Documents
+                            </h4>
+                        </div>
+                        <div class="space-y-4">
+                            <!--====== Cv =====-->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Resume/CV <span class="text-red-500">*</span>
+                                </label>
+                                <input type="file" required accept=".pdf,.doc,.docx"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:cursor-pointer">
+                                <p class="text-xs text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                            </div>
+
+                            <!--====== Documents =====-->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    All Documents
+                                </label>
+                                <input type="file" required accept=".pdf,.doc,.docx"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 file:cursor-pointer">
+                                <p class="text-xs text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--======= Additional Information Section =========-->
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 pb-2 border-b-2 border-blue-500">
+                            <span
+                                class="w-9 h-9 inline-flex items-center justify-center rounded-lg bg-blue-400 text-blue-600">
+                                <img src="../assets/svg/message-square-code.svg" class="w-5 h-5" alt="">
+                            </span>
+                            <h4 class="text-lg font-bold text-gray-800">
+                                Additional Information
+                            </h4>
+                        </div>
+
+                        <!--====== why join us =====-->
+                        <div class="mt-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Why do you want to join Buddha School? <span class="text-red-500">*</span>
+                            </label>
+                            <textarea required rows="4"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+                                placeholder="Tell us about your motivation and interest in this position..."></textarea>
+                        </div>
+
+                        <!--====== Source of info =====-->
+                        <div class="mt-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                How did you hear about this position? <span class="text-red-500">*</span>
+                            </label>
+                            <select required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+                                <option value="">Select an option</option>
+                                <option value="website">School Website</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral</option>
+                                <option value="job-portal">Job Portal</option>
+                                <option value="newspaper">Newspaper</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!--====== Expected Salary =====-->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Expected Salary Range
+                                </label>
+                                <input type="text"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                                    placeholder="e.g., NPR 40,000 - 50,000">
+                            </div>
+
+                            <!--====== Available From =====-->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Available to Start From <span class="text-red-500">*</span>
+                                </label>
+                                <input type="date" required
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--====== Terms and Conditions ======-->
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input type="checkbox" required
+                                class="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500">
+                            <span class="text-sm text-gray-700">
+                                I confirm that all the information provided is accurate and true to the best of my
+                                knowledge. I understand that any false information may result in the rejection of my
+                                application or termination of employment. <span class="text-red-500">*</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!--======= Action Buttons ========-->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t">
+                        <button type="button" data-targetModalId="vacancy-apply-modal"
+                            class="close-modal flex-1 inline-flex items-center justify-center gap-3 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition">
+                            <img src="../assets/svg/corner-down-left.svg" class="w-4 h-4 pointer-events-none" alt="">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="flex-1 px-6 py-3 inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transition shadow-lg">
+                            <img src="../assets/svg/save-white.svg" class="w-4 h-4 pointer-events-none" alt="">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--============================ Footer Section ===================================-->
+    <footer class="text-black shadow-md border-t bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 py-16" data-aos="fade-up">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Our School</h3>
+                    <p class="leading-relaxed mb-6">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis numquam fugit minima,
+                        voluptatum repudiandae vel fuga! Placeat iure dicta soluta ullam aspernatur.
+                    </p>
+
+                    <!--====== social media links =====-->
+                    <div class="flex gap-4 justify-center md:justify-start">
+
+                        <a href="#" target="_blank"
+                            class="min-w-10 min-h-10 rounded-full bg-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                            <img src="../assets/svg/facebook-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+                        </a>
+
+                        <a href="#" target="_blank"
+                            class="min-w-10 min-h-10 rounded-full bg-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                            <img src="../assets/svg/insta-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+                        </a>
+
+                        <a href="#" target="_blank"
+                            class="min-w-10 min-h-10 rounded-full bg-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                            <img src="../assets/svg/twitter-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+                        </a>
+
+                        <a href="#" target="_blank"
+                            class="min-w-10 min-h-10 rounded-full bg-blue-500 flex items-center justify-center transition-all duration-300 hover:bg-blue-600 hover:-translate-y-[2px] hover:shadow-md">
+                            <img src="../assets/svg/linkedin-white.svg" class="w-3.5 h-3.5 pointer-events-none">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!--========== Quick Links ======-->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="grid grid-cols-2 md:grid-cols-1 gap-2">
+                        <li>
+                            <a href="../index.html"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Home
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                About
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Gallery
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Vacancy
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Contact
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!--========= Resources ========-->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="grid grid-cols-2 md:grid-cols-1 gap-2">
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Calendar
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Library
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Cafateria menu
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                Transportation
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="inline-flex group items-center justify-center gap-1 hover:text-blue-500 transition-colors">
+                                School Yellow
+                                <img src="../assets/svg/arrow-right-blue.svg"
+                                    class="w-4 h-4 pointer-events-none invisible group-hover:visible group-hover:translate-x-1 transition-all duration-200"
+                                    alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--====== Contact Info ========-->
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3">
+                            <img src="../assets/svg/map-pin-blue.svg" class="w-5 h-5" alt="">
+                            <span>Lumbini, Nepal</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <img src="../assets/svg/phone-blue.svg" class="w-5 h-5" alt="">
+                            <span>+977 9867543657</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <img src="../assets/svg/mail-blue.svg" class="w-5 h-5" alt="">
+                            <span>info@ourschool.edu</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <img src="../assets/svg/clock-blue.svg" class="w-5 h-5" alt="">
+                            <span>Mon - Fri: 8:00 AM - 4:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm">
+                        © 2025 Our School. All rights reserved.
+                    </p>
+                    <div class="flex gap-6 text-sm">
+                        <a href="#" class="hover:text-blue-500 transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-blue-500 transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-blue-500 transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--===== AOS Js =======-->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
